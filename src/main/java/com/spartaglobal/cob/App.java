@@ -1,5 +1,6 @@
 package com.spartaglobal.cob;
 
+
 /**
  * Hello world!
  *
@@ -8,6 +9,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        StringAnagram stringAnagram = new StringAnagram();
+        stringAnagram.checkStringAnagram("army", "Mary");
     }
 }
