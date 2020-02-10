@@ -3,7 +3,7 @@ package com.spartaglobal.cob;
 public class StringAnagram {
 
 
-    public static void checkStringAnagram(String anagram1, String anagram2) {
+    public static boolean checkStringAnagram(String anagram1, String anagram2) {
         if (anagram1.length() == anagram2.length()) {
             char[] a1 = anagram1.toLowerCase().toCharArray();
             char[] a2 = anagram2.toLowerCase().toCharArray();
@@ -18,11 +18,15 @@ public class StringAnagram {
 
             if (matchCounter == anagram1.length()) {
                 System.out.println(anagram1 + " is an anagram of " + anagram2);
+                return true;
             } else {
+
                 System.out.println(anagram1 + " is not an anagram of " + anagram2);
+                return false;
             }
         } else {
             System.out.println(anagram1 + "is not an anagram of " + anagram2);
+            return false;
         }
     }
 }

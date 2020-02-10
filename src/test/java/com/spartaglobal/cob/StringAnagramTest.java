@@ -8,24 +8,18 @@ public class StringAnagramTest {
     @Test
     void testToCheckStringAnagramsAreTrue(){
         StringAnagram stringAnagram = new StringAnagram();
-        stringAnagram.checkStringAnagram("army", "mary");
+        assertTrue(stringAnagram.checkStringAnagram("army", "mary"));
     }
 
     @Test
     void testToCheckStringAnagramsCanBeFalse(){
         StringAnagram stringAnagram = new StringAnagram();
-        stringAnagram.checkStringAnagram("beth","mary");
-    }
-
-    @Test
-    void testToCheckStringAnagramsCannotBeNull(){ //NEEDS LOOKED AT
-        StringAnagram stringAnagram = new StringAnagram();
-        stringAnagram.checkStringAnagram("","");
+        assertFalse(stringAnagram.checkStringAnagram("beth","mary"));
     }
 
     @Test
     void testToCheckToLowerCaseWorks(){
         StringAnagram stringAnagram = new StringAnagram();
-        stringAnagram.checkStringAnagram("MARY","marY");
+        assertTrue(stringAnagram.checkStringAnagram("MARY","marY"));
     }
 }
